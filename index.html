@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>window.location.replace("https://educational-purpose-content.bauer-bp.workers.dev/sales");</script>
+<script>
+const tag = window.location.hash.replace('#', '');
+
+if (tag) {
+  window.location.replace('https://educational-purpose-content.bauer-bp.workers.dev/' + tag);
+}
+</script>
 </head>
 <body></body>
 </html>
