@@ -2,11 +2,11 @@
 <html>
 <head>
 <script>
-const tag = window.location.hash.replace('#', '');
+const path = window.location.pathname;
+const segments = path.split('/').filter(s => s);
+const tag = segments[segments.length - 1];
 
-if (tag) {
-  window.location.replace('https://educational-purpose-content.bauer-bp.workers.dev/' + tag);
-}
+window.location.replace('https://educational-purpose-content.bauer-bp.workers.dev/' + tag);
 </script>
 </head>
 <body></body>
