@@ -2,11 +2,13 @@
 <html>
 <head>
 <script>
-const path = window.location.pathname;
-const segments = path.split('/').filter(s => s);
-const tag = segments[segments.length - 1];
+const url = window.location.href;
+const hashIndex = url.indexOf('/#');
 
-window.location.replace('https://educational-purpose-content.bauer-bp.workers.dev/' + tag);
+if (hashIndex !== -1) {
+  const tag = url.substring(hashIndex + 2); // gets everything after /#
+  window.location.replace('https://educational-purpose-content.bauer-bp.workers.dev/' + tag);
+}
 </script>
 </head>
 <body></body>
